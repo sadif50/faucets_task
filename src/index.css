@@ -13,3 +13,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.custom-btn {
+  border: 1px solid #aaa;
+  margin-right: 10px;
+}
+.custom-user {
+  border: 1px solid #aaa;
+  border-radius: 99px;
+  background-color: #ddd;
+  width: 40px;
+  text-align: center;
+  line-height: 1;
+}
+.custom-user .dropdown-toggle::after {
+  border: none !important;
+  margin: 0;
+}

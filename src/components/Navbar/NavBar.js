@@ -1,47 +1,35 @@
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import {AiOutlineUser} from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   return (
     <Navbar expand="lg" className='py-3'>
-      <Container fluid>
+      <Container>
         <Navbar.Brand href="/" className='fw-semibold fs-3 text-primary p-0'>Faucets</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
-          <Nav
-            className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: '100px' }}
-            navbarScroll
-          >
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Link</Nav.Link>
-            <NavDropdown title="Link" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
-                Something else here
-              </NavDropdown.Item>
+          <Nav className="ms-auto my-2 my-lg-0">
+            <NavDropdown className='custom-btn' title="Ethereum Kovan" id="navbarScrollingDropdown">
+              <NavDropdown.Item>Action</NavDropdown.Item>
+              <NavDropdown.Item>Action</NavDropdown.Item>
+              <NavDropdown.Item>Action</NavDropdown.Item>
+              <NavDropdown.Item>Action</NavDropdown.Item>
+              <NavDropdown.Item>Action</NavDropdown.Item>
+              <NavDropdown.Item>Action</NavDropdown.Item>
+              <NavDropdown.Item>Action</NavDropdown.Item>
+              <NavDropdown.Item>Action</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#" disabled>
-              Link
-            </Nav.Link>
+            <Nav.Link className='custom-btn'>Connect Wallet</Nav.Link>
+            <NavDropdown className='custom-user' title={<AiOutlineUser/>} id="navbarScrollingDropdown">
+              <Link className='dropdown-item' to='/login'>Login</Link>
+              <Link className='dropdown-item' to='/signup'>Sign Up</Link>
+              <Link className='dropdown-item' to='/faq'>FAQ</Link>
+            </NavDropdown>
           </Nav>
-          <Form className="d-flex">
-            <Form.Control
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button variant="outline-success">Search</Button>
-          </Form>
         </Navbar.Collapse>
       </Container>
     </Navbar>

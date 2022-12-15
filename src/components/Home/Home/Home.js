@@ -1,18 +1,30 @@
 import React from 'react';
 import { Card, Button, Col, Container, Form, Row } from 'react-bootstrap';
+import {AiFillWarning} from 'react-icons/ai';
 
 const Home = () => {
     return (
-        <Container fluid>
+        <Container>
             <div className='my-5'>
                 <h2 className='fw-semibold text-primary mb-3'>Request testnet LINK</h2>
-                <p className='w-50'>Get testnet LINK for an account on one of the supported blockchain testnets so you can create and test your own oracle and Chainlinked smart contract</p>
-            </div>
-            <Card className='border-0 rounded-0 p-3 mb-4'>
                 <Row>
-                        <p >
+                    <Col md={6}>
+                        <p>Get testnet LINK for an account on one of the supported blockchain testnets so you can create and test your own oracle and Chainlinked smart contract</p>
+                    </Col>
+                </Row>
+            </div>
+            <Card className='border-0 rounded-0 p-3 mb-4 shadow'>
+                <Row>
+                    <Col md={12}>
+                        <p className='bg-secondary p-2 text-white d-flex align-items-center'>
+                            <span>
+                                <AiFillWarning/> &nbsp;
+                            </span>
+                            <span>
                             Your wallet is connected to Ethereum Kovan, so you are requesting Ethereum Kovan Link/ETH.
+                            </span>
                         </p>
+                    </Col>
                     <Col md={6}>
                         <Form>
                             <Form.Group className="mb-3">
