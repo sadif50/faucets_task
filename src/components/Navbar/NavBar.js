@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   return (
-    <Navbar expand="lg" className='py-3'>
+    <Navbar expand="lg" className='py-3 bg-white'>
       <Container>
         <Navbar.Brand href="/" className='fw-semibold fs-3 text-primary p-0'>Faucets</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
